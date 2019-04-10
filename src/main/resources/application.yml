@@ -1,0 +1,3 @@
+logging:
+  level:
+    me.johnniang.springbootcli: DEBUG
