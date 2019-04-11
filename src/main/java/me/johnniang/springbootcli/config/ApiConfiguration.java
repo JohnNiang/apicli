@@ -25,7 +25,7 @@ public class ApiConfiguration {
 
         corsFilter.setOrder(Ordered.HIGHEST_PRECEDENCE + 10);
         corsFilter.setFilter(new CorsFilter());
-        corsFilter.addUrlPatterns("/api/*", "/admin/api/*");
+        corsFilter.addUrlPatterns("/api/*");
 
         return corsFilter;
     }

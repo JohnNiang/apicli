@@ -1,0 +1,6 @@
+logging:
+  level:
+    me.johnniang.springbootcli: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
