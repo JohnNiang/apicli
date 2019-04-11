@@ -1,4 +1,4 @@
-package me.johnniang.springbootcli.repository;
+package me.johnniang.springbootcli.repository.base;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

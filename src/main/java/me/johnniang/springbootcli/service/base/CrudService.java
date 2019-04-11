@@ -1,4 +1,4 @@
-package me.johnniang.springbootcli.service;
+package me.johnniang.springbootcli.service.base;
 
 import me.johnniang.springbootcli.exception.NotFoundException;
 import org.springframework.data.domain.Page;

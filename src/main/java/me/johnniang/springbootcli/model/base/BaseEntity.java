@@ -1,4 +1,4 @@
-package me.johnniang.springbootcli.model;
+package me.johnniang.springbootcli.model.base;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,8 +1,8 @@
-package me.johnniang.springbootcli.service;
+package me.johnniang.springbootcli.service.base;
 
 import lombok.extern.slf4j.Slf4j;
 import me.johnniang.springbootcli.exception.NotFoundException;
-import me.johnniang.springbootcli.repository.BaseRepository;
+import me.johnniang.springbootcli.repository.base.BaseRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
