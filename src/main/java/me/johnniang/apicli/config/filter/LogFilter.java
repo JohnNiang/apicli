@@ -32,7 +32,7 @@ public class LogFilter extends OncePerRequestFilter {
         // Do filter
         filterChain.doFilter(request, response);
 
-        log.debug("Ending   url: [{}], method: [{}], ip: [{}], status: [{}], usage: [{}] ms",
+        log.debug("Ending   url: [{}], method: [{}], ip: [{}], code: [{}], usage: [{}] ms",
                 request.getRequestURL(),
                 request.getMethod(),
                 remoteAddr,
