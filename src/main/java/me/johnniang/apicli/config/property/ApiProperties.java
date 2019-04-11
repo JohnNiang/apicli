@@ -16,6 +16,11 @@ public class ApiProperties {
     /**
      * Production environment.
      */
-    private boolean productionEnv = true;
+    private boolean prodEnv = true;
+
+    /**
+     * Documentation enabled.
+     */
+    private boolean docEnabled = false;
 
 }

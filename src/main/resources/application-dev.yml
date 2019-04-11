@@ -1,3 +1,6 @@
+api:
+  prod-env: false
+  doc-enabled: true
 logging:
   level:
     me.johnniang.apicli: DEBUG
