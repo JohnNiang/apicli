@@ -13,6 +13,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("api")
 public class ApiProperties {
 
+    /**
+     * Production environment.
+     */
     private boolean productionEnv = true;
 
 }
