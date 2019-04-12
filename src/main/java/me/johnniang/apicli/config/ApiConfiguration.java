@@ -3,6 +3,7 @@ package me.johnniang.apicli.config;
 import me.johnniang.apicli.config.filter.CorsFilter;
 import me.johnniang.apicli.config.filter.LogFilter;
 import me.johnniang.apicli.config.property.ApiProperties;
+import me.johnniang.apicli.model.constant.ApiConstant;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -25,7 +26,7 @@ public class ApiConfiguration {
 
         corsFilter.setOrder(Ordered.HIGHEST_PRECEDENCE + 10);
         corsFilter.setFilter(new CorsFilter());
-        corsFilter.addUrlPatterns("/api/*");
+        corsFilter.addUrlPatterns(ApiConstant.API_PREFIX + "*");
 
         return corsFilter;
     }
@@ -36,7 +37,7 @@ public class ApiConfiguration {
 
         logFilter.setOrder(Ordered.HIGHEST_PRECEDENCE + 9);
         logFilter.setFilter(new LogFilter());
-        logFilter.addUrlPatterns("/*");
+        logFilter.addUrlPatterns(ApiConstant.API_PREFIX + "*");
 
         return logFilter;
     }

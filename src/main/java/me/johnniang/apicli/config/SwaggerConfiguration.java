@@ -4,6 +4,7 @@ import com.fasterxml.classmate.TypeResolver;
 import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import me.johnniang.apicli.config.property.ApiProperties;
+import me.johnniang.apicli.model.constant.ApiConstant;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -60,7 +61,7 @@ public class SwaggerConfiguration {
         log.debug("Doc disabled: [{}]", apiProperties.isDocEnabled());
         return buildApiDocket("me.johnniang.apicli",
                 "me.johnniang.apicli.web.base",
-                "/api/**")
+                ApiConstant.API_PREFIX + "**")
                 .enable(!apiProperties.isDocEnabled());
     }
 
@@ -106,7 +107,7 @@ public class SwaggerConfiguration {
     private SecurityContext securityContext() {
         return SecurityContext.builder()
                 .securityReferences(defaultAuth())
-                .forPaths(PathSelectors.regex("/api/.*"))
+                .forPaths(PathSelectors.regex(ApiConstant.API_PREFIX + ".*"))
                 .build();
     }
 
