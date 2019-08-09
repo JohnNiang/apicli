@@ -4,7 +4,6 @@ package me.johnniang.apicli.exception;
  * Frequent access exception.
  *
  * @author johnniang
- * @date 3/28/19
  */
 public class FrequentAccessException extends BadRequestException {
 

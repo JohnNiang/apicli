@@ -4,6 +4,7 @@ import me.johnniang.apicli.config.filter.CorsFilter;
 import me.johnniang.apicli.config.filter.LogFilter;
 import me.johnniang.apicli.config.property.ApiProperties;
 import me.johnniang.apicli.model.constant.ApiConstant;
+import org.springframework.boot.autoconfigure.web.servlet.ConditionalOnMissingFilterBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +22,7 @@ import org.springframework.core.Ordered;
 public class ApiConfiguration {
 
     @Bean
+    @ConditionalOnMissingFilterBean(CorsFilter.class)
     public FilterRegistrationBean<CorsFilter> corsFilter() {
         FilterRegistrationBean<CorsFilter> corsFilter = new FilterRegistrationBean<>();
 
@@ -32,6 +34,7 @@ public class ApiConfiguration {
     }
 
     @Bean
+    @ConditionalOnMissingFilterBean(LogFilter.class)
     public FilterRegistrationBean<LogFilter> logFilter() {
         FilterRegistrationBean<LogFilter> logFilter = new FilterRegistrationBean<>();
 
